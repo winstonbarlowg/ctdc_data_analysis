@@ -1,9 +1,16 @@
 from flask import (
-    Blueprint, flash, g, redirect, render_template, request, url_for
+    Blueprint, Flask, flash, g, redirect, render_template, request, url_for
 )
 
-app = Blueprint('website', __name__)
+app = Flask(__name__)
+
+# app = Blueprint('website', __name__)
 
 @app.route('/')
 def index():
+    return render_template('index.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
     
