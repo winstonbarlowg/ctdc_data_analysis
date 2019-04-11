@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block header %}
+<header>
+    <h1>Cases by Gender</h1>
+</header>
+{% endblock header %}
+{% block content %}
+<div class="row">
+        <div class="col-sm-4">
+          <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Female Cases</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-light">Show</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Male Cases</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-light">Show</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4s">
+          <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Unknown Cases</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-light">Show</a>
+            </div>
+          </div>
+        </div>
+      </div>
+{% endblock content %}
