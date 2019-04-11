@@ -4,27 +4,29 @@
         <h1 class="display-4">Project H</h1>
         <p class="lead">A data visualisation project for cases of human trafficking worldwide</p>
         <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <p>The Counter Trafficking Data Collaborative has collected data of reported human trafficking cases globally 
+            from 2002 to mid 2018. <br>
+            The purpose of this webiste is to understand the impact of trafficking by visualising key data points.</p>
         <p class="lead">
           <a class="btn btn-primary btn-lg" href="#" role="button">Explore</a>
         </p>
       </div>
 
       <div class="card">
-        <h5 class="card-header">Countries of Origin</h5>
+        <h5 class="card-header">Global Map</h5>
         <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <h5 class="card-title">Countries of Origin</h5>
+          <p class="card-text">Explore a map showing the countries of origin of victims between 2002 and 2018</p>
+          <a href="{{ url_for('maps') }}" class="btn btn-primary">Go</a>
         </div>
       </div>
 
       <div class="card">
         <h5 class="card-header">Cases by Gender</h5>
         <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <h5 class="card-title">####</h5>
+          <p class="card-text">Explore the number of reported cases by gender between 2002 and 2018</p>
+          <a href="#" class="btn btn-primary">Go</a>
         </div>
       </div>
 {% endblock content %}
