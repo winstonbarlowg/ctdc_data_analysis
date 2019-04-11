@@ -1,6 +1,15 @@
 {% extends "layout.html" %}
-{% block map %}    
-    <div id="map"></div>
+{% block content %}
+<div class="card">
+    <div class="card-body">
+      This is some text within a card body. STUFF!!!!
+    </div>
+  </div>
+{% endblock content %}
+
+{% block maps %}
+<div class="d-flex p-2">
+<div id="map"></div>
     <script>
 
       function initMap() {
@@ -81,4 +90,5 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDkbp6HEc5BDwvmIer4Tos-SXNFczkA4c
     &callback=initMap">
     </script>
-{% endblock map %}
+</div>
+{% endblock maps %}
