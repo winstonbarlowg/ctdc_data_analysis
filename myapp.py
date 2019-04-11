@@ -14,6 +14,10 @@ def index():
 def maps():
     return render_template('mapsclustering.html')
 
+@app.route('/scatter')
+def scatter():
+    return render_template('scatter.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
 
