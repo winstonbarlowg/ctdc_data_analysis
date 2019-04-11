@@ -7,8 +7,10 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
   <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}">
-  
+  <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-grid.css') }}">
+
   <title>Data Visualisation</title>
 </head>
 <body>
@@ -27,7 +29,39 @@
         </div>
       </nav>
   </header>
-    
+
+	<!-- <section class="section section--features" id="features">
+
+    <div class="section__content section__content--fluid-width section__content--padding">
+      <div class="grid grid--4col grid--features">
+      
+        
+        <div class="grid__item">
+          <div class="grid__icon"><img src="images/icons/icons-64/desktop-chart-64.png" alt="" title=""/></div>
+          <h3 class="grid__title">SaaS Landing Page <span>Analysis</span></h3>
+          <p class="grid__text">A perfect structure created after we analized trends in SaaS landing page designs. Analysis made to the most popular SaaS businesses.</p>
+        </div>
+
+        <div class="grid__item">
+          <div class="grid__icon"><img src="images/icons/icons-64/target-64.png" alt="" title=""/></div>
+          <h3 class="grid__title">Target <span>audience</span></h3>
+          <p class="grid__text">Blocks, Elements and Modifiers. A smart HTML/CSS structure that can easely be reused. Layout driven by the purpose of modularity.</p>
+        </div>
+        
+          <div class="grid__item">
+          <div class="grid__icon"><img src="images/icons/icons-64/security-64.png" alt="" title=""/></div>
+          <h3 class="grid__title">Best online <span>Security</span></h3>
+          <p class="grid__text">A perfect structure created after we analized trends in SaaS landing page designs. Analysis made to the most popular SaaS businesses.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <svg class="svg-features-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <path d="M0,100 Q50,50 100,100 L0,100 Z" fill="#fff"/>
+    </svg>
+</section> -->
+
   <div id="map_canvas" class="container">
         {% block content %}{% endblock content%}
   </div>   
