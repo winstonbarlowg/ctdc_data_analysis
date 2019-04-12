@@ -16,7 +16,7 @@ def maps():
 
 @app.route('/data/map_data')
 def data_for_map():
-    return app.send_static_file('themap_GeoJSON.js')
+    return app.send_static_file('themap.json')
 
 @app.route('/scatter')
 def scatter():
