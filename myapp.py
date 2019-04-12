@@ -1,5 +1,5 @@
 from flask import (
-    Blueprint, Flask, flash, g, redirect, render_template, request, url_for
+    Blueprint, Flask, flash, g, redirect, render_template, request, url_for, make_response, current_app
 )
 
 app = Flask(__name__)
@@ -10,9 +10,13 @@ app = Flask(__name__)
 def index():
     return render_template('main.html')
 
-@app.route('/maps')
+@app.route('/maps', methods=['GET', 'POST'])
 def maps():
     return render_template('mapsclustering.html')
+
+@app.route('/data/map_data')
+def data_for_map():
+    return app.send_static_file('themap_GeoJSON.js')
 
 @app.route('/scatter')
 def scatter():
