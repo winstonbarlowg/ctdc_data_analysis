@@ -9,86 +9,51 @@
 
 {% block maps %}
 <div class="d-flex p-2">
-<div id="map"></div>
+    <div id="map"></div>
     <script>
-
+      var map;
       function initMap() {
-
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 3,
-          center: {lat: -28.024, lng: 140.887}
+        map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 2,
+          center: {lat: -33.865427, lng: 151.196123},
+          mapTypeId: 'terrain'
         });
 
-        // Create an array of alphabetical characters used to label the markers.
-        var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        //var script = document.createElement('script');
+        //script.src = 'data/themap_GeoJSON.js';
+        //document.getElementsByTagName('head')[0].appendChild(script);
+        
+        // access blocked by CORB
+        //map.data.loadGeoJson('https://github.com/winstonbarlowg/SE_Foundations_Project/blob/master/data/themap.json');
+        map.data.loadGeoJson('/mapdata')  
 
-        // Add some markers to the map.
-        // Note: The code uses the JavaScript Array.prototype.map() method to
-        // create an array of markers based on a given "locations" array.
-        // The map() method here has nothing to do with the Google Maps API.
-        var markers = locations.map(function(location, i) {
-          return new google.maps.Marker({
-            position: location,
-            label: labels[i % labels.length]
-          });
+        map.data.setStyle(function(feature) {
+          var magnitude = feature.getProperty('mag');
+          return {
+            icon: getCircle(magnitude)
+          };
         });
-
-        // Add a marker clusterer to manage the markers.
-        var markerCluster = new MarkerClusterer(map, markers,
-            {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
       }
-      var locations = [
-      {lat: 33.93911, lng: 67.709953},
-      {lat: 41.153332, lng: 20.168331},
-      {lat: 23.684994, lng: 90.356331},
-      {lat: 12.238333, lng: -1.561593},
-      {lat: 42.733883, lng: 25.48583},
-      {lat: -16.290154, lng: -63.588653},
-      {lat: 53.709807, lng:27.953389}, 
-      {lat: -4.038333, lng: 21.758664},
-      {lat: 7.539989, lng: -5.54708}, 
-      {lat: 35.86166, lng: 104.195397},
-      {lat: 4.570868, lng: -74.297333},
-      {lat: 15.179384, lng: 39.782334},
-      {lat: 7.946527, lng: -1.023194},
-      {lat: 945587, lng: -9.696645},
-      {lat: 11.803749, lng: -15.180413},
-      {lat: 18.971187, lng: -72.285215},
-      {lat: -0.789275, lng: 113.921327},
-      {lat: 20.593684, lng: 78.96288},
-      {lat: 41.20438, lng: 74.766098},
-      {lat: 12.565679, lng: 104.990963},
-      {lat: 35.907757, lng: 127.766922},
-      {lat: 48.019573, lng: 66.923684},
-      {lat: 19.85627, lng: 102.495496},
-      {lat: 7.873054, lng: 80.771797}, 
-      {lat: 47.411631, lng: 28.369885},
-      {lat: -18.766947, lng: 46.869107},
-      {lat: 17.570692, lng: -3.996166},
-      {lat: 21.913965, lng: 95.956223},
-      {lat: 23.634501, lng: -102.552784},
-      {lat: 17.607789, lng: 8.081666},
-      {lat: 9.081999, lng: 8.675277},
-      {lat: 28.394857, lng: 84.124008},
-      {lat: 12.879721, lng: 121.774017},
-      {lat: 45.943161, lng: 24.96676},
-      {lat: 8.460555, lng: -11.779889},
-      {lat: 14.497401, lng: -14.452362},
-      {lat: 13.794185, lng: -88.89653},
-      {lat: 15.870032, lng: 100.992541},
-      {lat: 38.861034, lng: 71.276093},
-      {lat: 38.969719, lng: 59.556278},
-      {lat: 48.379433, lng: 31.16558},
-      {lat: 1.373333, lng: 32.290275},
-      {lat: 37.09024, lng: -95.712891},
-      {lat: 14.058324, lng: 108.277199}
-      ]
-    </script>
-    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+
+      function getCircle(magnitude) {
+        return {
+          path: google.maps.SymbolPath.CIRCLE,
+          fillColor: 'red',
+          fillOpacity: .2,
+          // scale: Math.pow(2, magnitude) / 2,
+          scale: (magnitude / 5),
+          strokeColor: 'white',
+          strokeWeight: .5
+        };
+      }
+
+      function eqfeed_callback(response) {
+        map.data.addGeoJson(response);
+      }
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDkbp6HEc5BDwvmIer4Tos-SXNFczkA4c
     &callback=initMap">
     </script>
-</div>
+</div>    
 {% endblock maps %}
