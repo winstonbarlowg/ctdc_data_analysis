@@ -234,11 +234,6 @@ button:focus {
   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color;
 }
-/* GOOGLE MAPS */
-.map {
-  width: 100%; 
-  height: 100%;
-}
 
 input,
 button,
