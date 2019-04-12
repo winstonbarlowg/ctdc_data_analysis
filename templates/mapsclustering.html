@@ -16,16 +16,10 @@
         map = new google.maps.Map(document.getElementById('map'), {
           zoom: 2,
           center: {lat: -33.865427, lng: 151.196123},
-          mapTypeId: 'terrain'
+          mapTypeId: 'roadmap'
         });
-
-        //var script = document.createElement('script');
-        //script.src = 'data/themap_GeoJSON.js';
-        //document.getElementsByTagName('head')[0].appendChild(script);
         
-        // access blocked by CORB
-        //map.data.loadGeoJson('https://github.com/winstonbarlowg/SE_Foundations_Project/blob/master/data/themap.json');
-        map.data.loadGeoJson('/mapdata')  
+        map.data.loadGeoJson('/data/map_data');
 
         map.data.setStyle(function(feature) {
           var magnitude = feature.getProperty('mag');
@@ -47,8 +41,8 @@
         };
       }
 
-      function eqfeed_callback(response) {
-        map.data.addGeoJson(response);
+      function eqfeed_callback(results) {
+        map.data.addGeoJson(results);
       }
     </script>
     <script async defer
