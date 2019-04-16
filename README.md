@@ -9,6 +9,7 @@ Final project for software engineering course.
     |-- requirements.txt
     |__ /env
     |__ /app
+        |-- __init__.py
         |__/main
            |-- __init__.py
            |-- routes.py
