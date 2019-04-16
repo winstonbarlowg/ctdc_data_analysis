@@ -1,13 +1,9 @@
 from flask import Flask
+import dash
 
-def create_app():
-    app = Flask(__name__)
-    
-    from app.main.routes import main
-    from app.visualisations.routes import viz
+server = Flask(__name__)
 
-    app.register_blueprint(main)
-    app.register_blueprint(viz)
+app = dash.Dash(__name__, server=server, url_base_pathname='/dashboard/')
 
-    return app
-
+from app.routes import *
+from app.dashapp import *
