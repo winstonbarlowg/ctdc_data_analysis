@@ -1,23 +1,27 @@
-# SE Foundations Semester @ CODE University 
-Final project for software engineering course. 
+# SE Foundations Semester @ CODE University
+Final project for software engineering course.
 
-## App structure 
+## App structure
 
 ```
 ~/
-    |-- myapp.py
+    |-- run.py
     |-- requirements.txt
     |__ /env
-    |__ /templates
-        |-- layout.html
-        |-- main.html
-        |-- mapsclustering.html
-        |-- scatter.html
-    |__ /static
-        |-- bootstrap.css
+    |__ /app
+        |__/main
+           |-- __init__.py
+           |-- routes.py
+        |__/visualisations
+           |-- __init__.py
+           |-- routes.py   
+        |__/static
+           |-- ...
+        |__/templates
+           |-- ...
     |__ /data
         |-- cases_per_citizenship.csv
-        |-- 
-        
-        
+        |--
+
+
 ```
