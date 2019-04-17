@@ -1,39 +1,55 @@
 {% extends "layout.html" %}
 {% block header %}
 <div class="container">
-<header>
-    <h1>Cases by Gender</h1>
-</header>
+<div class="jumbotron">
+    <h1 class="display-4">Project H</h1>
+    <p class="lead">A data visualisation project for cases of human trafficking worldwide</p>
+    <hr class="my-4">
+    <p>The Counter Trafficking Data Collaborative has collected data of reported human trafficking cases globally
+        from 2002 to mid 2018. <br>
+        The purpose of this webiste is to understand the impact of trafficking by visualising key data points.</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="#" role="button">Explore</a>
+    </p>
+</div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://source.unsplash.com/random" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://source.unsplash.com/random" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://source.unsplash.com/random" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 {% endblock header %}
 {% block content %}
-<div class="row">
-        <div class="col-sm-4">
-          <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Female Cases</h5>
-              <p class="card-text">Cases registered globally from 2002 to 2008.</p>
-              <a href="#" class="btn btn-light">Show</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Male Cases</h5>
-              <p class="card-text">Cases registered globally from 2002 to 2008.</p>
-              <a href="#" class="btn btn-light">Show</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4s">
-          <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Unknown Cases</h5>
-              <p class="card-text">Cases registered globally, only available from [] to []</p>
-              <a href="#" class="btn btn-light">Show</a>
-            </div>
-          </div>
-        </div>
-</div>        
+<div class="container">
+  <h3> Select the gender</h3>
+</div>
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="http://127.0.0.1:8050/"></iframe>
+</div>
+<div class="container">
+  <h1>Read more</h1>
+</div>
 {% endblock content %}
