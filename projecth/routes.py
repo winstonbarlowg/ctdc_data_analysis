@@ -1,33 +1,33 @@
 from flask import (
-    Blueprint, Flask, flash, g, redirect, render_template, request, url_for, make_response, current_app
+    Blueprint, Flask, flash, g, redirect, render_template, request, url_for, make_response, current_app, send_from_directory
 )
-
-from app import *
-from app.dashapp import app
-# app = Flask(__name__)
+# from projecth import *
+# from projecth.dashapp import app
+app = Flask(__name__)
 # app = Blueprint('website', __name__)
 
-@server.route('/')
+@app.route('/')
 def index():
     return render_template('main.html')
 
-@server.route('/maps', methods=['GET', 'POST'])
+@app.route('/maps', methods=['GET', 'POST'])
 def maps():
     return render_template('mapsclustering.html')
 
-@server.route('/about')
+@app.route('/about')
 def about():
     return render_template('about.html')
 
 # return geojson file for Google Maps API clustering
-@server.route('/data/map_data')
-def data_for_map():
-    return server.send_static_file('themap.json')
+# send_from_ directory is a secure way to expose static files
+@app.route('/data/<path:themap>')
+def data_for_map(themap):
+    return send_from_directory('static', 'themap_GeoJSON.js')
 
-@server.route('/scatter')
+@app.route('/scatter')
 def scatter():
     return render_template('scatter.html')
 
 # run app in debug mode, running the script directly to save time
-# if __name__ == '__main__':
-#     app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)
