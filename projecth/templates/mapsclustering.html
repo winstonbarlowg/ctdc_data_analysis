@@ -1,10 +1,16 @@
 {% extends "layout.html" %}
 {% block content %}
-<div class="card">
-    <div class="card-body">
-      This is some text within a card body. STUFF!!!!
-    </div>
-  </div>
+<div class="jumbotron">
+    <h1 class="display-4">Project H</h1>
+    <p class="lead">A data visualisation project for cases of human trafficking worldwide</p>
+    <hr class="my-4">
+    <p>The Counter Trafficking Data Collaborative has collected data of reported human trafficking cases globally
+        from 2002 to mid 2018. <br>
+        The purpose of this webiste is to understand the impact of trafficking by visualising key data points.</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="#" role="button">Explore</a>
+    </p>
+</div>
 {% endblock content %}
 
 {% block maps %}
@@ -15,12 +21,17 @@
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           zoom: 2,
-          center: {lat: -33.865427, lng: 151.196123},
+          // 36.372788, -39.106847
+          center: {lat: 36.372788, lng: -39.106847},
           mapTypeId: 'roadmap'
         });
-        
-        map.data.loadGeoJson('/data/map_data');
-        
+
+        // map.data.loadGeoJson('http://localhost:5000/data/themap.json');
+        var script = document.createElement('script');
+
+        script.src = 'http://localhost:5000/data/themap_GeoJSON.js';
+        document.getElementsByTagName('head')[0].appendChild(script);
+
         map.data.setStyle(function(feature) {
           var magnitude = feature.getProperty('mag');
           return {
@@ -35,31 +46,25 @@
           fillColor: 'red',
           fillOpacity: .2,
           // scale: Math.pow(2, magnitude) / 2,
-          scale: (magnitude / 5),
+          scale: (magnitude / 50),
           strokeColor: 'white',
           strokeWeight: .5
         };
       }
 
-       // Loop through the results array and place a marker for each
-      // set of coordinates.
-      window.eqfeed_callback = function(results) {
-        for (var i = 0; i < results.features.length; i++) {
-          var coords = results.features[i].geometry.coordinates;
-          var latLng = new google.maps.LatLng(coords[1],coords[0]);
-          var marker = new google.maps.Marker({
-            position: latLng,
-            map: map
-          });
-        }
-      }
-
-// fix this, data not defined 
+// fix this, data not defined
       //map.data.addGeoJson();
+      function eqfeed_callback(results) {
+        map.data.addGeoJson(results);
+      }
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDkbp6HEc5BDwvmIer4Tos-SXNFczkA4c
     &callback=initMap">
     </script>
-</div>    
+</div>
+<div class="container">
+<h1> add unknown countries # here</h1>
+<h1> add countries of exploitation here (blue markers)</h1> 
+</div>
 {% endblock maps %}
