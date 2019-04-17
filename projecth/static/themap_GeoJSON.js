@@ -5,7 +5,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 67709953,3393911 ]
+       "coordinates":  [ 67.709953,33.93911 ]
     },
     "properties": {
     "country":"AF",
@@ -17,7 +17,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 20168331,41153332 ]
+       "coordinates":  [ 20.168331,41.153332 ]
     },
     "properties": {
     "country":"AL",
@@ -29,7 +29,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 90356331,23684994 ]
+       "coordinates":  [ 90.356331,23.684994 ]
     },
     "properties": {
     "country":"BD",
@@ -41,7 +41,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -1561593,12238333 ]
+       "coordinates":  [ -15.61593,12.238333 ]
     },
     "properties": {
     "country":"BF",
@@ -53,7 +53,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 2548583,42733883 ]
+       "coordinates":  [ 25.48583,42.733883 ]
     },
     "properties": {
     "country":"BG",
@@ -65,7 +65,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -63588653,-16290154 ]
+       "coordinates":  [ -63.588653,-16.290154 ]
     },
     "properties": {
     "country":"BO",
@@ -77,7 +77,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 27953389,53709807 ]
+       "coordinates":  [ 27.953389,53.709807 ]
     },
     "properties": {
     "country":"BY",
@@ -89,7 +89,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 21758664,-4038333 ]
+       "coordinates":  [ 21.758664,-40.38333 ]
     },
     "properties": {
     "country":"CD",
@@ -101,7 +101,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -554708,7539989 ]
+       "coordinates":  [ -55.4708,75.39989 ]
     },
     "properties": {
     "country":"CI",
@@ -113,7 +113,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 104195397,3586166 ]
+       "coordinates":  [ 10.4195397,35.86166 ]
     },
     "properties": {
     "country":"CN",
@@ -125,7 +125,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -74297333,4570868 ]
+       "coordinates":  [ -74.297333,45.70868 ]
     },
     "properties": {
     "country":"CO",
@@ -137,7 +137,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 39782334,15179384 ]
+       "coordinates":  [ 39.782334,15.179384 ]
     },
     "properties": {
     "country":"ER",
@@ -149,7 +149,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -1023194,7946527 ]
+       "coordinates":  [ -10.23194,79.46527 ]
     },
     "properties": {
     "country":"GH",
@@ -161,7 +161,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -9696645,9945587 ]
+       "coordinates":  [ -96.96645,99.45587 ]
     },
     "properties": {
     "country":"GN",
@@ -173,7 +173,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -15180413,11803749 ]
+       "coordinates":  [ -15.180413,11.803749 ]
     },
     "properties": {
     "country":"GW",
@@ -185,7 +185,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -72285215,18971187 ]
+       "coordinates":  [ -72.285215,18.971187 ]
     },
     "properties": {
     "country":"HT",
@@ -197,7 +197,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 113921327,-789275 ]
+       "coordinates":  [ 11.3921327,-78.9275 ]
     },
     "properties": {
     "country":"ID",
@@ -209,7 +209,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 7896288,20593684 ]
+       "coordinates":  [ 78.96288,20.593684 ]
     },
     "properties": {
     "country":"IN",
@@ -221,7 +221,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 74766098,4120438 ]
+       "coordinates":  [ 74.766098,41.20438 ]
     },
     "properties": {
     "country":"KG",
@@ -233,7 +233,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 104990963,12565679 ]
+       "coordinates":  [ 10.4990963,12.565679 ]
     },
     "properties": {
     "country":"KH",
@@ -245,7 +245,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 127766922,35907757 ]
+       "coordinates":  [ 12.7766922,35.907757 ]
     },
     "properties": {
     "country":"KR",
@@ -257,7 +257,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 66923684,48019573 ]
+       "coordinates":  [ 66.923684,48.019573 ]
     },
     "properties": {
     "country":"KZ",
@@ -269,7 +269,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 102495496,1985627 ]
+       "coordinates":  [ 10.2495496,19.85627 ]
     },
     "properties": {
     "country":"LA",
@@ -281,7 +281,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 80771797,7873054 ]
+       "coordinates":  [ 80.771797,78.73054 ]
     },
     "properties": {
     "country":"LK",
@@ -293,7 +293,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 28369885,47411631 ]
+       "coordinates":  [ 28.369885,47.411631 ]
     },
     "properties": {
     "country":"MD",
@@ -305,7 +305,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 46869107,-18766947 ]
+       "coordinates":  [ 46.869107,-18.766947 ]
     },
     "properties": {
     "country":"MG",
@@ -317,7 +317,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -3996166,17570692 ]
+       "coordinates":  [ -39.96166,17.570692 ]
     },
     "properties": {
     "country":"ML",
@@ -329,7 +329,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 95956223,21913965 ]
+       "coordinates":  [ 95.956223,21.913965 ]
     },
     "properties": {
     "country":"MM",
@@ -341,7 +341,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -102552784,23634501 ]
+       "coordinates":  [ -10.2552784,23.634501 ]
     },
     "properties": {
     "country":"MX",
@@ -353,7 +353,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 8081666,17607789 ]
+       "coordinates":  [ 80.81666,17.607789 ]
     },
     "properties": {
     "country":"NE",
@@ -365,7 +365,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 8675277,9081999 ]
+       "coordinates":  [ 86.75277,90.81999 ]
     },
     "properties": {
     "country":"NG",
@@ -377,7 +377,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 84124008,28394857 ]
+       "coordinates":  [ 84.124008,28.394857 ]
     },
     "properties": {
     "country":"NP",
@@ -389,7 +389,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 121774017,12879721 ]
+       "coordinates":  [ 12.1774017,12.879721 ]
     },
     "properties": {
     "country":"PH",
@@ -401,7 +401,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 2496676,45943161 ]
+       "coordinates":  [ 24.96676,45.943161 ]
     },
     "properties": {
     "country":"RO",
@@ -413,7 +413,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -11779889,8460555 ]
+       "coordinates":  [ -11.779889,84.60555 ]
     },
     "properties": {
     "country":"SL",
@@ -425,7 +425,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -14452362,14497401 ]
+       "coordinates":  [ -14.452362,14.497401 ]
     },
     "properties": {
     "country":"SN",
@@ -437,7 +437,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -8889653,13794185 ]
+       "coordinates":  [ -88.89653,13.794185 ]
     },
     "properties": {
     "country":"SV",
@@ -449,7 +449,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 100992541,15870032 ]
+       "coordinates":  [ 10.0992541,15.870032 ]
     },
     "properties": {
     "country":"TH",
@@ -461,7 +461,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 71276093,38861034 ]
+       "coordinates":  [ 71.276093,38.861034 ]
     },
     "properties": {
     "country":"TJ",
@@ -473,7 +473,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 59556278,38969719 ]
+       "coordinates":  [ 59.556278,38.969719 ]
     },
     "properties": {
     "country":"TM",
@@ -485,7 +485,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 3116558,48379433 ]
+       "coordinates":  [ 31.16558,48.379433 ]
     },
     "properties": {
     "country":"UA",
@@ -497,7 +497,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 32290275,1373333 ]
+       "coordinates":  [ 32.290275,13.73333 ]
     },
     "properties": {
     "country":"UG",
@@ -509,7 +509,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -95712891,3709024 ]
+       "coordinates":  [ -95.712891,37.09024 ]
     },
     "properties": {
     "country":"US",
@@ -533,7 +533,7 @@ eqfeed_callback({
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 108277199,14058324 ]
+       "coordinates":  [ 10.8277199,14.058324 ]
     },
     "properties": {
     "country":"VN",
