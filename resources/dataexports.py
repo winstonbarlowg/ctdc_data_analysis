@@ -13,6 +13,9 @@ df = pd.read_csv('global_dataset.csv', delimiter = ",", header=0)
 #
 # df2.to_csv(r'transposed.csv')
 
+# subset with year, type of exploit, and case ID
+exploit_type2 = df[['yearOfRegistration', 'typeOfExploitConcatenated', 'case_id']]
+
 genders = df.groupby(['yearOfRegistration', 'gender']).count()['case_id'].unstack()
 
 genders.to_csv('gender_cases_per_year.csv')
