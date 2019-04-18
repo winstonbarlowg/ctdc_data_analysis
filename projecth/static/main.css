@@ -1,0 +1,41 @@
+#jumbotron_text_img {
+  color: #ffffff;
+  font-family: Muli;
+}
+
+h1, h3, h4, h5 {
+  font-family: Poppins;
+  font-weight: bold;
+  color: #C3073F;
+}
+
+h2 {
+  font-family: Poppins;
+  font-weight: bold;
+  color: #4E4E50;
+}
+
+a {
+  font-family: Muli;
+  color: #6F2232;
+}
+
+p {
+  font-family: Muli;
+}
+
+#navbar {
+  box-shadow: 0px 1px 10px #E8E8E8;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #C3073F;
+  border-color: #C3073F;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #950740;
+  border-color: #950740;
+}

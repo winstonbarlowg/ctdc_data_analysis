@@ -55,6 +55,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* font-family: Chronicle;  */
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -2420,7 +2421,7 @@ fieldset:disabled a.btn {
   pointer-events: none;
 }
 
-.btn-primary {
+/* .btn-primary {
   color: #fff;
   background-color: #007bff;
   border-color: #007bff;
@@ -2430,7 +2431,7 @@ fieldset:disabled a.btn {
   color: #fff;
   background-color: #0069d9;
   border-color: #0062cc;
-}
+} */
 
 .btn-primary:focus, .btn-primary.focus {
   box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
@@ -4558,7 +4559,7 @@ input[type="button"].btn-block {
   background-position: center;
   background-repeat: no-repeat;
 }
-
+/* SHADOWS FOR CARD ADDED! */
 .card {
   position: relative;
   display: -ms-flexbox;
@@ -4569,9 +4570,9 @@ input[type="button"].btn-block {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 1px solid rgba(255, 255, 255, 0);
   border-radius: 0.25rem;
-  box-shadow: 0 0 5px black;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.125);
 }
 
 .card > hr {
@@ -5095,9 +5096,11 @@ a.badge-dark:focus, a.badge-dark.focus {
 }
 
 .jumbotron {
+  background-image: url("img/900.jpg");
+  background-size: cover;
   padding: 2rem 1rem;
   margin-bottom: 2rem;
-  background-color: #e9ecef;
+  /* background-color: #e9ecef; */
   border-radius: 0.3rem;
 }
 
@@ -10056,4 +10059,6 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
+
+
 /*# sourceMappingURL=bootstrap.css.map */
