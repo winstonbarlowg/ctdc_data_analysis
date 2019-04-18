@@ -2,22 +2,23 @@
 {% block content %}
 <div class="jumbotron">
     <h1 class="display-4">Project H</h1>
-    <p class="lead">A data visualisation project for cases of human trafficking worldwide</p>
+    <p class="lead" id="jumbotron_text_img">A data visualisation project for cases of human trafficking worldwide</p>
     <hr class="my-4">
-    <p>The Counter Trafficking Data Collaborative has collected data of reported human trafficking cases globally
+    <p id="jumbotron_text_img">The Counter Trafficking Data Collaborative has collected data of reported human trafficking cases globally
         from 2002 to mid 2018. <br>
         The purpose of this webiste is to understand the impact of trafficking by visualising key data points.</p>
-    <p class="lead">
-      <a class="btn btn-primary btn-lg" href="#" role="button">Explore</a>
-    </p>
+
 </div>
 {% endblock content %}
 
 {% block maps %}
+<h2>Global dataset: total number of cases per country or origin</h2>
 <div class="d-flex p-2">
     <div id="map"></div>
     <script>
       var map;
+      // creating infoWindow
+      // var infowindow = new google.maps.InfoWindow();
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           zoom: 2,
@@ -28,8 +29,8 @@
 
         // map.data.loadGeoJson('http://localhost:5000/data/themap.json');
         var script = document.createElement('script');
-
-        script.src = 'http://localhost:5000/data/themap_GeoJSON.js';
+        //path from app.route
+        script.src = '/data/<path:themap>';
         document.getElementsByTagName('head')[0].appendChild(script);
 
         map.data.setStyle(function(feature) {
@@ -52,6 +53,16 @@
         };
       }
 
+    //   map.data.addListener('click', function(event) {
+    // 	var myHTML = event.feature.getProperty("mag");
+    // 	infowindow.setContent("<div style='width:150px;'>"+myHTML+"</div>");
+    // 	// position the infowindow on the marker
+    // 	infowindow.setPosition(event.feature.getGeometry().get());
+    // 	// anchor the infowindow on the marker
+    // 	infowindow.setOptions({pixelOffset: new google.maps.Size(0,-30)});
+    // 	infowindow.open(map);
+    // });
+
 // fix this, data not defined
       //map.data.addGeoJson();
       function eqfeed_callback(results) {
@@ -64,7 +75,8 @@
     </script>
 </div>
 <div class="container">
-<h1> add unknown countries # here</h1>
-<h1> add countries of exploitation here (blue markers)</h1> 
+  <div class="shadow p-3 mb-5 bg-white rounded">
+    <h1> From this period, 12,318 of the reported cases have unknown citizenship.</h1>
+  </div>
 </div>
 {% endblock maps %}
