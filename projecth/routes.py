@@ -6,6 +6,7 @@ from flask import (
 app = Flask(__name__)
 # app = Blueprint('website', __name__)
 
+@app.route('/index')
 @app.route('/')
 def index():
     return render_template('main.html')
