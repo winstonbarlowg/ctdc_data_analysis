@@ -3,10 +3,9 @@
 <div class="container">
 <div class="jumbotron">
     <h1 class="display-4">Statistics by Gender</h1>
-    <p class="lead" id="jumbotron_text_img">A data visualisation project for cases of human trafficking worldwide</p>
+    <p class="lead" id="jumbotron_text_img">A data visualisation project to raise awareness about human trafficking worldwide</p>
     <hr class="my-4">
-    <p id="jumbotron_text_img">The Counter Trafficking Data Collaborative has collected data of reported human trafficking cases globally
-        from 2002 to mid 2018. <br>
+    <p id="jumbotron_text_img">Thanks to the Counter Trafficking <br>
         The purpose of this webiste is to understand the impact of trafficking by visualising key data points.</p>
 </div>
 </div>
@@ -14,25 +13,25 @@
   <div class="row">
     <div class="col-sm">
       <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="https://source.unsplash.com/random" alt="Card image cap">
+        <img class="card-img-top" src="{{ url_for('static', filename='img/sexual-exploitation.jpg') }}" alt="Card image cap">
         <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class="card-text">More than half of all the female cases globally are sexually exploited, with the primary cause being lured into a false relationship.</p>
         </div>
       </div>
     </div>
     <div class="col-sm">
       <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="https://source.unsplash.com/random" alt="Card image cap">
+        <img class="card-img-top" src="{{ url_for('static', filename='img/forced-labour.jpg') }}" alt="Card image cap">
         <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class="card-text">Male trafficked victims are predominantly exploited under forced labour such as in agriculture or manufacturing.</p>
         </div>
       </div>
     </div>
     <div class="col-sm">
       <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="https://source.unsplash.com/random" alt="Card image cap">
+        <img class="card-img-top" src="https://source.unsplash.com/-Cmz06-0btw/1600x900" alt="Card image cap">
         <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class="card-text">At any given time in 2016, an estimated 40.3 million people are in modern slavery, including 24.9 million in forced labour and 15.4 million in forced marriage.</p>
         </div>
       </div>
     </div>
@@ -40,47 +39,121 @@
 </div>
 {% endblock header %}
 {% block content %}
+<!-- LINE CHART FOR NUMBER OF VICTIMS PER GENDER PER YEAR -->
 <div class="container">
-  <canvas id="line-chart" width="400" height="225"></canvas>
-<script>
-  new Chart(document.getElementById("line-chart"), {
-    type: 'line',
-    data: {
-      labels: ['2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010',
-              '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018'],
-      datasets: [{
-        label: 'Female Cases',
-        borderColor: window.chartColors.red,
-        backgroundColor: window.chartColors.red,
+  <canvas id="line-chart" width="400" height="180"></canvas>
+  <script>
+    new Chart(document.getElementById("line-chart"), {
+      type: 'line',
+      data: {
+        labels: ['2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010',
+                '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018'],
+        datasets: [{
+          label: 'Female Cases',
+          borderColor: window.chartColors.red,
+          backgroundColor: window.chartColors.red,
+          fill: false,
+          data: [1116, 364, 250, 1189, 1237, 1124, 665, 666, 890, 1195, 720, 1136, 1946, 4833,
+                14027, 8368, 625],
+        }, {
+          label: 'Male Cases',
+          borderColor: window.chartColors.blue,
+          backgroundColor: window.chartColors.blue,
+          fill: false,
+          data: [0, 15, 0, 428, 297, 345, 163, 126, 573, 628, 675, 977, 1183, 1876,
+                4766, 1747, 645],
+        }, {
+        label: 'Unknown Cases',
+        borderColor: window.chartColors.yellow,
+        backgroundColor: window.chartColors.yellow,
         fill: false,
-        data: [1116, 364, 250, 1189, 1237, 1124, 665, 666, 890, 1195, 720, 1136, 1946, 4833,
-              14027, 8368, 625],
-      }, {
-        label: 'Male Cases',
-        borderColor: window.chartColors.blue,
-        backgroundColor: window.chartColors.blue,
-        fill: false,
-        data: [0, 15, 0, 428, 297, 345, 163, 126, 573, 628, 675, 977, 1183, 1876,
-              4766, 1747, 645],
-      }, {
-      label: 'Unknown Cases',
-      borderColor: window.chartColors.yellow,
-      backgroundColor: window.chartColors.yellow,
-      fill: false,
-      data: [0, 0, 0, 0, 0, 0, 0, 0, 58, 0, 0, 0, 0, 81,
-            100, 290, 0],
+        data: [0, 0, 0, 0, 0, 0, 0, 0, 58, 0, 0, 0, 0, 81,
+              100, 290, 0],
+          }
+        ]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'Human Trafficking Cases per Gender Globally'
         }
-      ]
-    },
-    options: {
-      title: {
-        display: true,
-        text: 'Human Trafficking Cases per Gender Globally'
       }
-    }
-  });
-</script>
+    });
+  </script>
 </div>
+<!-- Doughnut chart for female type of exploit -->
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-8">
+      <canvas id="pie-chart"></canvas>
+      <script>
+      new Chart(document.getElementById("pie-chart"), {
+          type: 'doughnut',
+          data: {
+            labels: ["Forced labour", "Sexual & labour exploitation combined", "Forced labour, slavery & similar practices", "Forced marriage", "Other", "Sexual exploitation", "Slavery and similar practices"],
+            datasets: [{
+              label: "Number of Cases",
+              backgroundColor: ["#0B5D75", "#8e5ea2","#3cba9f","#e8c3b9","#4D5360", "#C20840", "#FFCB00"],
+              data: [4437,136,1,154,4835,18003,306]
+            }]
+          },
+          options: {
+            responsive: true,
+            legend: {
+              position: 'bottom',
+            },
+            title: {
+              display: true,
+              text: 'Female Cases'
+            }
+          }
+      });
+      </script>
+    </div>
+    <div class="col-6 col-md-4">
+      <h3> Some text</h3>
+      <p> checking how some text looks here to display some information about the chart to the left</p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-6 col-md-4">
+      <h3> Some text</h3>
+      <p> checking how some text looks here to display some information about the chart to the left</p>
+    </div>
+<!-- Doughnut chart for male type of explot-->
+    <div class="col-12 col-md-8">
+      <canvas id="pie-chart2"></canvas>
+      <script>
+        new Chart(document.getElementById("pie-chart2"), {
+            type: 'doughnut',
+            data: {
+              labels: ['Forced Labour','Other', 'Sexual Exploitation', 'Slavery and similar practices'],
+              datasets: [{
+                label: "Number of Cases",
+                backgroundColor: ["#0B5D75", "#4D5360","#C20840","#FFCB00"],
+                data: [5325, 2231, 752, 68]
+              }]
+            },
+            options: {
+              responsive: true,
+              legend: {
+                position: 'bottom',
+              },
+              title: {
+                display: true,
+                text: 'Male Cases'
+              }
+            }
+        });
+      </script>
+    </div>
+  </div>
+</div>
+<script>
+</script>
 <div class="container">
   <h1>Read more</h1>
 </div>

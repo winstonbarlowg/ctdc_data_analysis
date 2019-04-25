@@ -2,20 +2,122 @@
 {% block content %}
 <div class="jumbotron">
     <h1 class="display-4">Project H</h1>
-    <p class="lead" id="jumbotron_text_img">A data visualisation project for cases of human trafficking worldwide</p>
+    <p class="lead" id="jumbotron_text_img">A data visualisation project to raise awareness about human trafficking worldwide.</p>
     <hr class="my-4">
-    <p id="jumbotron_text_img">The Counter Trafficking Data Collaborative has collected data of reported human trafficking cases globally
-        from 2002 to mid 2018. <br>
-        The purpose of this webiste is to understand the impact of trafficking by visualising key data points.</p>
+    <p id="jumbotron_text_img">The Counter Trafficking Data Collaborative (CTDC), is the first global data hub on human trafficking.
+        It has allowed organisations and projects to better work on meaningful data analysis and visualisations to both raise awarenes and develop solutions.<br>
+        From the CTDC Global Dataset, Project H looks into 55,000+ cases from 2002-2018* to draw insights for impact.</p>
     <p class="lead">
-      <a class="btn btn-primary btn-lg" href="#" role="button">Explore</a>
+      <a class="btn btn-primary btn-lg" href="#peyo" role="button">Explore</a>
     </p>
+</div>
+<div class="container" id="peyo">
+  <div class="row">
+    <div class="col-6 col-md-4 my-auto">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">A age-broad global issue</h5>
+          <p class="card-text">Victims from all ages and backgrounds are trafficked worldwide. The main differences between age groups
+          are the recruitment, means of control used, and type of exploitation </p>
+          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-8">
+      <canvas id="barchart"></canvas>
+      <script>
+        var ctx = document.getElementById('barchart').getContext("2d");
+        var gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
+        gradientStroke.addColorStop(0, "#0B5D75");
+        gradientStroke.addColorStop(1, "#C20840");
+
+        var color = Chart.helpers.color;
+		var barChartData = {
+			labels: ['0--8', '9--17', '18--20', '21--23', '24--26', '27--29', '30--38', '39--47', '48+',],
+			datasets: [{
+				label: 'All Cases 2002-2018',
+				// backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
+				// borderColor: window.chartColors.red,
+        backgroundColor: gradientStroke,
+        borderColor: gradientStroke,
+        fillColor: gradientStroke,
+				borderWidth: 1,
+				data: [1739, 7634, 4141, 4013, 3311, 2496, 6706, 2679, 1502]
+			}],
+		};
+    var BarChart = new Chart(ctx, {
+		// new Chart(document.getElementById("barchart"), {
+				type: 'bar',
+				data: barChartData,
+				options: {
+					responsive: true,
+					legend: {
+						position: 'top',
+					},
+					title: {
+						display: true,
+						text: 'Age Groups of Trafficked Victims'
+					}
+				}
+			});
+      </script>
+      <p align="center"> *8733 cases are from unknown age groups.</p>
+    </div>
   </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-6 col-md-4 my-auto">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">How can it happen?</h5>
+          <p class="card-text">Overall, victims trafficked for sexual exploitation are recruited most often by an intimate partner or friends and family.
+            For labour exploitation, the recruiter relationship remains largely unknown (other), with a small percentage of friends and family involved. </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-8">
+      <canvas id="bar-chart1"></canvas>
+      <script>
+        		var color = Chart.helpers.color;
+        		var horizontalBarChartData = {
+        			labels: ['Family/Relative', 'Friend', 'Intimate Partner', 'Other'],
+        			datasets: [{
+        				label: 'Known Cases 2002-2018',
+        				backgroundColor: ['#F54D22', '#F54D22', '#F54D22','#F54D22'],
+        				borderColor: ['#F54D22', '#F54D22', '#F54D22', '#F54D22'],
+        				borderWidth: 1,
+        				data: [1589, 1465, 1575, 4317]
+        			},]
+        		};
+            new Chart(document.getElementById("bar-chart1"), {
+        				type: 'horizontalBar',
+        				data: horizontalBarChartData,
+        				options: {
+        					elements: {
+        						rectangle: {
+        							borderWidth: 2,
+        						}
+        					},
+        					responsive: true,
+        					legend: {
+        						position: 'top',
+        					},
+        					title: {
+        						display: true,
+        						text: 'Recruiter Relationship'
+        					}
+        				},
+        			});
+      </script>
+    </div>
+  </div>
+</div>
 <div class="container">
   <div class="card">
-    <h5 class="card-header">Global Map</h5>
+    <!-- <h5 class="card-header">Global Map</h5> -->
     <div class="card-body">
-      <h5 class="card-title">Countries of Origin</h5>
+      <h5 class="card-title">Geographical snapshot</h5>
       <p class="card-text">Explore a map showing the countries of origin of victims between 2002 and 2018</p>
       <a href="{{ url_for('maps') }}" class="btn btn-primary">Go</a>
     </div>
@@ -23,9 +125,9 @@
 </div>
 <div class="container">
   <div class="card">
-    <h5 class="card-header">Statistics by Gender</h5>
+    <!-- <h5 class="card-header">Statistics by Gender</h5> -->
     <div class="card-body">
-      <h5 class="card-title">The majority of cases registered are Female victims</h5>
+      <h5 class="card-title">Insights based on gender</h5>
       <p class="card-text">Explore the number of reported cases by gender between 2002 and 2018</p>
       <a href="{{ url_for('scatter') }}" class="btn btn-primary">Go</a>
     </div>

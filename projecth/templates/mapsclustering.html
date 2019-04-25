@@ -9,10 +9,8 @@
         The purpose of this webiste is to understand the impact of trafficking by visualising key data points.</p>
 
 </div>
-{% endblock content %}
 
-{% block maps %}
-<h2>Global dataset: total number of cases per country or origin</h2>
+<h2>Countries of origin, on the map (2002-2018)</h2>
 <div class="d-flex p-2">
     <div id="map"></div>
     <script>
@@ -52,19 +50,6 @@
           strokeWeight: .5
         };
       }
-
-    //   map.data.addListener('click', function(event) {
-    // 	var myHTML = event.feature.getProperty("mag");
-    // 	infowindow.setContent("<div style='width:150px;'>"+myHTML+"</div>");
-    // 	// position the infowindow on the marker
-    // 	infowindow.setPosition(event.feature.getGeometry().get());
-    // 	// anchor the infowindow on the marker
-    // 	infowindow.setOptions({pixelOffset: new google.maps.Size(0,-30)});
-    // 	infowindow.open(map);
-    // });
-
-// fix this, data not defined
-      //map.data.addGeoJson();
       function eqfeed_callback(results) {
         map.data.addGeoJson(results);
       }
@@ -79,4 +64,98 @@
     <h1> From this period, 12,318 of the reported cases have unknown citizenship.</h1>
   </div>
 </div>
-{% endblock maps %}
+<!-- COUNTRY OF CITIZENSHIP FEM -->
+<div class="container">
+  <canvas id="bar-chart1"></canvas>
+  <script>
+    		var color = Chart.helpers.color;
+    		var horizontalBarChartData = {
+    			labels: ['Afghanistan', 'Albania', 'Bangladesh', 'Burkina Faso', 'Bulgaria', 'Bolivia', 'Belarus',
+          'DR Congo', "Cote d'Ivoire", 'China', 'Colombia', 'Eritrea', 'Ghana', 'Guinea', 'Guinea-Bissau',
+          'Haiti', 'Indonesia', 'India', 'Kyrgyz Republic', 'Cambodia', 'South Korea', 'Kazakhstan', 'Laos',
+          'Sri Lanka', 'Moldova', 'Madagascar', 'Mali', 'Myanmar', 'Mexico', 'Niger', 'Nigeria', 'Nepal',
+          'Philippines', 'Romania', 'Sierra Leone', 'Senegal', 'El Salvador', 'Thailand', 'Tajikistan',
+          'Turkmenistan', 'Ukraine', 'Uganda', 'United States', 'Uzbekistan', 'Vietnam', 'not found'],
+    			datasets: [{
+    				label: 'All Cases 2002-2018',
+    				backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
+    				borderColor: window.chartColors.red,
+    				borderWidth: 1,
+    				data: [239, 45, 11, 33, 342, 18, 1517, 53, 31, 115, 124, 13, 545, 15, 145, 352, 1947, 15, 449,
+            1949, 12, 54, 130, 85, 7499, 94, 45, 1281, 444, 31, 119, 27, 11433, 685, 81, 70, 11, 144, 77, 26,
+            7793, 70, 4159, 261, 185, 12318]
+    			},]
+    		};
+
+    		// window.onload = function() {
+    		// 	var ctx = document.getElementById('bar-chart1').getContext('2d');
+    		// 	window.myHorizontalBar = new Chart(ctx, {
+        //   // var BarChart = new Chart(ctx, {
+        new Chart(document.getElementById("bar-chart1"), {
+    				type: 'horizontalBar',
+    				data: horizontalBarChartData,
+    				options: {
+    					elements: {
+    						rectangle: {
+    							borderWidth: 2,
+    						}
+    					},
+    					responsive: true,
+    					legend: {
+    						position: 'right',
+    					},
+    					title: {
+    						display: true,
+    						text: 'Citizenship of Victims'
+    					}
+    				}
+    			});
+  </script>
+</div>
+<!-- COUNTRY OF EXPLOITS FEM -->
+<div class="container">
+</div>
+<div class="container">
+  <canvas id="bar-chart2"></canvas>
+  <script>
+    		var color = Chart.helpers.color;
+    		var horizontalBarChartData2 = {
+    			labels: ['United Arab Emirates', 'Afghanistan', 'Albania', 'Argentina', 'Austria', 'Bosnia and Herzegovina',
+          'Bulgaria', 'Bahrain', 'Belarus', 'China', 'Cyprus', 'Czech Republic', 'Denmark', 'Ecuador', 'Egypt', 'Ghana',
+          'Hong Kong', 'Haiti', 'Indonesia', 'Italy', 'Jordan', 'Japan', 'Cambodia', 'Kuwait', 'Kazakhstan', 'Lebanon',
+          'Moldova', 'Madagascar', 'Macedonia', 'Mauritius', 'Mexico', 'Malaysia', 'Oman', 'Philippines', 'Poland',
+          'Qatar', 'Romania', 'Russia', 'Saudi Arabia', 'Singapore', 'Sierra Leone', 'Senegal', 'Syria', 'Thailand',
+          'Tajikistan', 'Turkmenistan', 'Turkey', 'Trinidad and Tobago', 'Taiwan', 'Ukraine', 'Uganda', 'United States',
+          'Uzbekistan', 'Vietnam', 'not found', 'South Africa', 'not found'],
+    			datasets: [{
+    				label: 'All Cases 2002-2018',
+    				backgroundColor: color(window.chartColors.blue).alpha(0.5).rgbString(),
+    				borderColor: window.chartColors.blue,
+    				borderWidth: 1,
+    				data: [515, 84, 45, 36, 24, 127, 356, 22, 381, 79, 12, 54, 17, 54, 13, 545, 31, 339, 1776, 28, 108, 123,
+            983, 210, 222, 78, 5698, 94, 194, 20, 13, 907, 94, 1988, 352, 239, 273, 2787, 257, 37, 81, 370, 41, 453,
+            88, 26, 262, 96, 33, 5308, 123, 16956, 193, 16, 211, 36, 188]
+    			},]
+    		};
+    		new Chart(document.getElementById("bar-chart2"), {
+    				type: 'horizontalBar',
+    				data: horizontalBarChartData2,
+    				options: {
+    					elements: {
+    						rectangle: {
+    							borderWidth: 2,
+    						}
+    					},
+    					responsive: true,
+    					legend: {
+    						position: 'right',
+    					},
+    					title: {
+    						display: true,
+    						text: 'Country of Exploitation'
+    					}
+    				}
+    			});
+  </script>
+</div>
+{% endblock content %}
