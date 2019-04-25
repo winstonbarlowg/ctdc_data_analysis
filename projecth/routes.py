@@ -25,7 +25,7 @@ def about():
 def data_for_map(themap):
     return send_from_directory('static', 'themap_GeoJSON.js')
 
-@app.route('/gender_breakdown')
+@app.route('/gender')
 def scatter():
     return render_template('gender_breakdown.html')
 
