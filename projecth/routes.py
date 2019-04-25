@@ -31,4 +31,5 @@ def scatter():
 
 # run app in debug mode, running the script directly to save time
 if __name__ == '__main__':
-    app.run(debug=True)
+    # app.run(debug=True)
+    app.run(host='0.0.0.0', port =80, debug=true)
