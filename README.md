@@ -8,18 +8,22 @@ Final project for software engineering course.
 - HTML + CSS (Bootstrap)
 - Google Maps API
 
-## Running the app / website
+## Installation
+
 - Clone this repository
-- Create a virtual environment:
+- Create an environment:
 ```
 cd SE_Foundations_Project
 python3 -m venv venv
 ```
-- Start virtual environment and install requirements:
+- Activate the environment and install the requirements:
 ```
 . venv/bin/activate
 pip install -r requirements.txt
 ```
+
+## Usage
+
 - `cd projecth` to run the server locally.
 Make sure that the last block looks like this:
 ```python
@@ -27,4 +31,5 @@ if __name__ == '__main__':
     app.run(debug=True)
     # app.run(host='0.0.0.0', port =80, debug=True)
 ```
-- Start the server with `python routes.py` and then go to localhost:5000 to see the website
+The last line shall be commented out when running it locally as it is meant for Google Cloud.
+- Start the server with `python routes.py` and then go to http://localhost:5000 to see the website running.
