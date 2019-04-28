@@ -7,7 +7,10 @@ The course gives an understanding of networking, building a back-end infrastruct
 ## About this project
 
 Project H is my final project for this course, putting together what I learned and building a website that shows impactful data about a delicate issue: Human Trafficking.
+
 This project also covered fundamental concepts of Data Science such as data cleaning and analysis, creating subsets for meaningful visualisations and drawing insights.
+
+The dataset used can be found here: https://www.ctdatacollaborative.org/
 
 ### Technologies used
 
@@ -42,3 +45,11 @@ if __name__ == '__main__':
 ```
 The last line shall be commented out when running it locally as it is meant for Google Cloud.
 - Start the server with `python routes.py` and then go to http://localhost:5000 to see the website running.
+
+## Data
+
+- Firstly, the global dataset must be downloaded from: https://www.ctdatacollaborative.org/download-global-dataset as CSV and saved in the `resources` directory.
+
+- `dataexports.py` can be used to look into some subsets of the global datasets easily through the REPL by calling specific variables or creating new ones.
+
+- To work with a Jupyter notebook, just run `jupyter notebook` in the main directory of the project with the enviroment activated. 
