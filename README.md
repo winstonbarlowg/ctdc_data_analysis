@@ -1,7 +1,16 @@
 # SE Foundations Semester @ CODE University
-Final project for software engineering course.
 
-## Technologies used
+The SE Foundations Semester is an intensive 15 week course covering the fundamentals of software engineering and web technology. The main language used in this course is Python, which had a thorough introduction on the first two weeks. In addition, the fundamentals of databases with SQL were introduced, and lastly JavaScript touching upon the front-end part.  
+
+The course gives an understanding of networking, building a back-end infrastructure with Python and Flask including a simple database, building a dynamic website, APIs, and deploying to a server like Google Cloud.
+
+## About this project
+
+Project H is my final project for this course, putting together what I learned and building a website that shows impactful data about a delicate issue: Human Trafficking.
+This project also covered fundamental concepts of Data Science such as data cleaning and analysis, creating subsets for meaningful visualisations and drawing insights.
+
+### Technologies used
+
 - Python + Pandas for data analysis
 - Python + Flask for backend
 - Chart.js for visualisations
